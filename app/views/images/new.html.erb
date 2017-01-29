@@ -1,2 +1,22 @@
-<h1>Images#new</h1>
-<p>Find me in app/views/images/new.html.erb</p>
+<h1>Add new Image</h1>
+
+<%= form_for @image do |i| %>
+  <p>
+    <%= i.label :artist %><br>
+    <%= i.text_field :artist %>
+  </p>
+  <p>
+    <%= i.label :title %><br>
+    <%= i.text_field :title %>
+  </p>
+  <p>
+    <%= i.label :year %><br>
+    <%= i.text_field :year %>
+  </p>
+  <p>
+    <%= i.label :url %><br>
+    <%= i.text_field :url %>
+  </p>
+  <%= i.submit "Create Image" %>
+
+<% end %>
