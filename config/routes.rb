@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'images/:id' => 'images#show', as: 'image'
 
-
+  get 'images/:id/edit' => 'images#edit', as: "edit_image"
+  patch 'images/:id' => "images#update"
 
 end
