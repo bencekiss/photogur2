@@ -1,4 +1,4 @@
-<%= link_to "Back to Images", images_url %> | <%= link_to "Edit", edit_image_path(@image) %> | <%= link_to "Delete", delete_image_path(@image), method: :delete, data: {confirm: "Are you entirely SURE, that you want to delete this image?"} %>
+<%= link_to "Back to Images", images_url %> | <%= link_to "Edit", edit_image_path(@image) %> | <%= link_to "Delete", @image, method: :delete, data: {confirm: "Are you entirely SURE, that you want to delete this image?"} %>
 
 <p><%= @image.artist %>, <%= @image.year %></p>
 <p><%= @image.title %></p>
