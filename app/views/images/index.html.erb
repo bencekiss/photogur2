@@ -1,10 +1,10 @@
-<h1>Images</h1>
+<h1>Most recent Images</h1>
 <%= link_to "New Image", "/images/new" %>
 
-<% if @images.empty? %>
+<% if @most_recent_images.empty? %>
   <p>No images to show</p>
 <% else %>
-  <% @images.each do |image| %>
+  <% @most_recent_images.each do |image| %>
     <p><%= image.artist %>, <%= image.year %></p>
     <p><%= image.title %></p>
     <%= link_to image_tag(image.url), "/images/#{ image.id }" %><br>
